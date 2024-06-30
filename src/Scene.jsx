@@ -5,18 +5,17 @@ import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
 function Scene() {
-
   // rotate scene
   const groupRef = useRef();
   useFrame((clock) => {
     groupRef.current.rotation.y = Math.sin(clock.clock.elapsedTime / 6) / 3;
-  }); 
+  });
 
   return (
     <>
       <Environment preset="sunset" background />
       <OrbitControls />
-      <group position={[0, 0, 0]} ref={groupRef} >
+      <group position={[0, 0, 0]} ref={groupRef}>
         <PCModel />
         <Glass />
         <ambientLight intensity={0.05} />
