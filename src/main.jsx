@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       fov: 45,
       near: 0.1,
       far: 2000,
-      position: [0.4, 0.3, 2],
+      position: [1, 0.3, 2],
     }}
   >
     <Suspense fallback={<Loading />}>
